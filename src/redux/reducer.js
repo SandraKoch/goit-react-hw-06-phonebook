@@ -16,6 +16,6 @@ export const contactsReducer = createReducer(contactsInitialState, {
 
 export const filterReducer = createReducer(filterInitialState, {
   [filterContacts]: (state, action) => {
-    return state.filter(contact => contact.name === action.payload);
+    return action.payload;
   },
 });

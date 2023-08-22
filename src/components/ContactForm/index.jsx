@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import css from './ContactForm.module.css';
 import { addContact } from 'redux/actions';
-// import { nanoid } from '@reduxjs/toolkit';
+import { nanoid } from '@reduxjs/toolkit';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ export const ContactForm = () => {
     e.preventDefault();
 
     const contact = {
-      // id: nanoid(),
+      id: nanoid(),
       name: e.currentTarget.elements.name.value,
       number: e.currentTarget.elements.number.value,
     };

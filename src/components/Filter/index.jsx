@@ -1,8 +1,13 @@
+import { useDispatch } from 'react-redux';
 import css from './Filter.module.css';
+import { filterContacts } from 'redux/actions';
 
-export const Filter = ({ onFilter }) => {
+export const Filter = () => {
+  const dispatch = useDispatch();
+
   const handleFilterChange = e => {
-    onFilter(e.target.value);
+    const query = e.target.value;
+    dispatch(filterContacts(query));
   };
 
   return (

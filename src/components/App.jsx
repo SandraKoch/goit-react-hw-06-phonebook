@@ -1,5 +1,6 @@
 import { ContactForm } from './ContactForm';
-// import { ContactList } from './ContactList';
+import { ContactList } from './ContactList';
+import { Filter } from './Filter';
 
 export const App = () => {
   return (
@@ -15,8 +16,8 @@ export const App = () => {
       <ContactForm />
 
       <h2>Contacts</h2>
-      {/* <Filter onFilter={filter => filterContacts(filter)} /> */}
-      {/* <ContactList /> */}
+      <Filter />
+      <ContactList />
     </div>
   );
 };
